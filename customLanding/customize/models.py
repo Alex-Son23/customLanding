@@ -130,3 +130,15 @@ class FormModel(models.Model):
     def __str__(self):
         return f"{self.name}"
 
+
+class IconModel(models.Model):
+    name = models.CharField(verbose_name='Название иконки', max_length=64)
+    href = models.TextField(verbose_name="Ссылка")
+    icon = models.CharField(verbose_name='Название иконки из font-awesome', max_length=64)
+
+    class Meta:
+        verbose_name = 'Иконка'
+        verbose_name_plural = 'Иконки'
+
+    def __str__(self):
+        return f"{self.name}"

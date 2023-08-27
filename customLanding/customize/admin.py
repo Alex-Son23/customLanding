@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import DisplayModel, HeaderModel, TextModel, ImageModel, LinkModel, ButtonModel, CardModel, FormModel
+from .models import DisplayModel, HeaderModel, TextModel, ImageModel, LinkModel, ButtonModel, CardModel, FormModel, \
+    IconModel
 
 
 # Register your models here.
@@ -45,3 +46,4 @@ admin.site.register(LinkModel, LinkModelAdmin)
 admin.site.register(ButtonModel, ButtonModelAdmin)
 admin.site.register(CardModel)
 admin.site.register(FormModel, FormModelAdmin)
+admin.site.register(IconModel)

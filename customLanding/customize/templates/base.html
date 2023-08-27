@@ -236,7 +236,7 @@
                               <div class="wpb_wrapper">
                                  <div class="key-icon-box icon-default icon-top kd-animated fadeInUp mb2 kd-animate" style="background-color: #ffffff;">
                                     <div class="ib-wrapper">
-                                       <i class="iconsmind-Network fa" style="font-size: 65px; color: #1f1f1f;"></i>
+                                       <img src="{{ Display_2.images.Первая_карточка.media_image.url }}" style="height:90px">
                                        <h4 class="service-heading">{{ Display_2.headers.Первая_карточка }}</h4>
                                        <p>{{ Display_2.texts.Первая_карточка }}</p>
                                     </div>
@@ -249,7 +249,8 @@
                               <div class="wpb_wrapper">
                                  <div class="key-icon-box icon-default icon-top kd-animated fadeInUp mb2 kd-animate" style="background-color: #ffffff;" data-animation-delay="200">
                                     <div class="ib-wrapper">
-                                       <i class="iconsmind-Brain fa" style="font-size: 65px; color: #1f1f1f;"></i>
+                                       {#<i class="iconsmind-Brain fa" style="font-size: 65px; color: #1f1f1f;"></i>#}
+                                       <img src="{{ Display_2.images.Вторая_карточка.media_image.url }}" style="height:90px">
                                        <h4 class="service-heading">{{ Display_2.headers.Вторая_карточка }}</h4>
                                        <p>{{ Display_2.texts.Вторая_карточка }}</p>
                                     </div>
@@ -262,7 +263,7 @@
                               <div class="wpb_wrapper">
                                  <div class="key-icon-box icon-default icon-top kd-animated fadeInUp kd-animate" style="background-color: #ffffff;" data-animation-delay="400">
                                     <div class="ib-wrapper">
-                                       <i class="iconsmind-Support fa" style="font-size: 65px; color: #1f1f1f;"></i>
+                                       <img src="{{ Display_2.images.Третья_карточка.media_image.url }}" style="height:90px">
                                        <h4 class="service-heading">{{ Display_2.headers.Третья_карточка }}</h4>
                                        <p>{{ Display_2.texts.Третья_карточка }}</p>
                                     </div>
@@ -295,7 +296,7 @@
                               <div class="wpb_wrapper">
                                  <div class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1487429625432">
                                     <figure class="wpb_wrapper vc_figure">
-                                       <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="888" height="770" src="{{ Display_3.images.Задний_фон.media_image.url }}" class="vc_single_image-img attachment-full" alt="" decoding="async" title="bg" loading="lazy" sizes="(max-width: 888px) 100vw, 888px"></div>
+                                       <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="888" height="770" src="{{ Display_3.images.Задний_фон.media_image.url }}" class="vc_single_image-img attachment-full" alt="{{ Display_3.images.Задний_фон.alt }}" decoding="async" title="{{ Display_3.images.Задний_фон.title }}" loading="lazy" sizes="(max-width: 888px) 100vw, 888px"></div>
                                     </figure>
                                  </div>
                               </div>
@@ -388,7 +389,7 @@
                         <div class="wpb_column vc_column_container vc_col-sm-6 vc_col-lg-6 vc_col-md-12 vc_col-xs-12">
                            <div class="vc_column-inner vc_custom_1488288813991">
                               <div class="wpb_wrapper">
-                                 <div class="video-container "><img width="620" height="380" src="https://www.keydesign-themes.com/intact/landing-page/wp-content/uploads/sites/7/2017/02/video-1.jpg" class="attachment-full" alt="" decoding="async" title="video" loading="lazy" srcset="https://www.keydesign-themes.com/intact/landing-page/wp-content/uploads/sites/7/2017/02/video-1.jpg 620w, https://www.keydesign-themes.com/intact/landing-page/wp-content/uploads/sites/7/2017/02/video-1-300x184.jpg 300w" sizes="(max-width: 620px) 100vw, 620px"><a data-toggle="modal" data-target="#video-modal-64e534f96b3b7" data-backdrop="true"><span class="play-video kd-animate"><span class="fa fa-play" style="font-weight: bold"></span></span></a></div>
+                                 <div class="video-container "><img width="620" height="380" src="{{ Display_4.images.Превью_видео.media_image.url }}" class="attachment-full" alt="{{ Display_4.images.Превью_видео.alt }}" decoding="async" title="{{ Display_4.images.Превью_видео.title }}" loading="lazy" srcset="https://www.keydesign-themes.com/intact/landing-page/wp-content/uploads/sites/7/2017/02/video-1.jpg 620w, https://www.keydesign-themes.com/intact/landing-page/wp-content/uploads/sites/7/2017/02/video-1-300x184.jpg 300w" sizes="(max-width: 620px) 100vw, 620px"><a data-toggle="modal" data-target="#video-modal-64e534f96b3b7" data-backdrop="true"><span class="play-video kd-animate"><span class="fa fa-play" style="font-weight: bold"></span></span></a></div>
                               </div>
                            </div>
                         </div>
@@ -751,18 +752,22 @@
                         <div id="text-2" class="footer_widget widget widget_text">
                            <div class="textwidget">
                               <p><img src="https://www.keydesign-themes.com/intact/business/wp-content/uploads/sites/2/2017/02/logo-footer.jpg" alt="Intact"></p>
-                              <p>Imperdiet parturient eleifend scelerisque natoque parturient rutrum mus eros dis ullamcorper a ullamcorper.</p>
+                              <p>{{ Display_9.texts.Текст_футера }}</p>
                            </div>
                         </div>
                         <div id="kd-socials-2" class="footer_widget widget kd-socials">
-                           <div class="socials-widget"> <a href="http://www.facebook.com/" target="_blank"><span class="fa fa-facebook"></span></a> <a href="http://www.twitter.com/" target="_blank"><span class="fa fa-twitter"></span></a> <a href="http://www.linkedin.com/" target="_blank"><span class="fa fa-linkedin"></span></a></div>
+                           <div class="socials-widget">
+                               {% for icon in icons %}
+                                   <a href="{{ icon.href }}" target="_blank"><span class="fa fa-{{ icon.icon }}"></span></a>
+                               {% endfor %}
+                           </div>
                         </div>
                      </div>
                      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 second-widget-area">
                         <div id="text-3" class="footer_widget widget widget_text">
                            <h5 class="widget-title"><span>Contact info</span></h5>
                            <div class="textwidget">
-                              <address> <span class="footer-address-row"><i class="fa fa-map-marker"></i><span class="address-overflow">{{ Display_9.texts.Адрес|safe }}</span></span> <span class="footer-phone-row"><i class="fa fa-phone"></i><strong>Phone:</strong> [+44] 450 88 800</span> <span class="footer-email-row"><i class="fa fa-envelope"></i><strong>E-Mail:</strong> <a href="mailto:contact@website.com">contact@website.com</a></span> <span class="footer-link-row"><i class="fa fa-globe"></i><strong>Web:</strong> <a href="http://keydesign-themes.com/intact" target="_blank" rel="noopener">keydesign-themes.com</a></span> </address>
+                              <address> <span class="footer-address-row"><i class="fa fa-map-marker"></i><span class="address-overflow">{{ Display_9.texts.Адрес|safe }}</span></span> <span class="footer-phone-row"><i class="fa fa-phone"></i><strong>Phone:</strong> {{ Display_9.texts.Номер_телефона }}</span> <span class="footer-email-row"><i class="fa fa-envelope"></i><strong>E-Mail:</strong> <a href="mailto:{ Display_9.texts.Email }}">{{ Display_9.texts.Email }}</a></span> <span class="footer-link-row"><i class="fa fa-globe"></i><strong>Web:</strong> <a href="{{ Display_9.links.Web.href }}" target="_blank" rel="noopener">{{ Display_9.links.Web.text }}</a></span> </address>
                            </div>
                         </div>
                      </div>
@@ -810,7 +815,7 @@
       </footer>
       <div class="modal fade video-modal" id="video-modal-64e534f96b3b7" role="dialog">
          <div class="modal-content">
-            <div class="row"><iframe width="712" height="400" src="https://www.youtube.com/embed/ZAwDZ5xYtO4" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+            <div class="row"><iframe width="712" height="400" src="{{ Display_4.links.youtube.href }}" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
          </div>
       </div>
       <div class="back-to-top"> <i class="fa fa-angle-up"></i></div>
