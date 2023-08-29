@@ -46,7 +46,7 @@ def index(request):
         #         data[f'Display_{display.id}']['icons'].append(icon)
         # for card in cards:
         #     data['cards'][card.name.replace(' ', '_')] = card
-    print(data)
+    # print(data)
 
     return render(request, 'base.html', context=data)
 

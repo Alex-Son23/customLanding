@@ -28,6 +28,7 @@ ALLOWED_HOSTS = [
     '92.118.151.97',
     '0.0.0.0',
     'shadow-ic.com',
+    'localhost',
 ]
 
 # Application definition
@@ -140,3 +141,8 @@ EMAIL_HOST_PASSWORD = 'piudeyrnmrusimnt'
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_USE_SSL = True
 EMAIL_PORT = 465
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+print(STATICFILES_DIRS)
