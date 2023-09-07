@@ -82,6 +82,7 @@ class ButtonModel(models.Model):
     text = models.TextField(verbose_name="Текст")
     href = models.TextField(verbose_name="Ссылка")
     title = models.TextField(verbose_name="title", blank=True, null=True)
+    add_form = models.BooleanField(verbose_name='Форма номер 2')
 
     class Meta:
         verbose_name = 'Кнопка'
@@ -96,7 +97,7 @@ class CardModel(models.Model):
     visible = models.BooleanField(verbose_name='Показать')
     title = models.CharField(verbose_name='Заголовок карточки', max_length=64)
     subtitle = models.CharField(verbose_name='Подзаголовок карточки', max_length=64)
-    price = models.IntegerField(verbose_name='Цена')
+    price = models.CharField(verbose_name='Цена', max_length= 64)
     descr = models.TextField(verbose_name='Характеристики товара')
     href = models.TextField(verbose_name="Ссылка")
 
@@ -139,6 +140,19 @@ class IconModel(models.Model):
     class Meta:
         verbose_name = 'Иконка'
         verbose_name_plural = 'Иконки'
+
+    def __str__(self):
+        return f"{self.name}"
+
+
+class NewsModel(models.Model):
+    name = models.CharField(verbose_name='Название новости', max_length=64)
+    href = models.TextField(verbose_name="Ссылка")
+    date = models.CharField(verbose_name='Дата публикации новости', max_length=64)
+
+    class Meta:
+        verbose_name = 'Новость'
+        verbose_name_plural = 'Новости'
 
     def __str__(self):
         return f"{self.name}"

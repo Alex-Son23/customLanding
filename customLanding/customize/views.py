@@ -3,11 +3,13 @@ from django.http import HttpResponse
 from django.core.mail import send_mail
 import json
 from .models import DisplayModel, HeaderModel, TextModel, ImageModel, LinkModel, ButtonModel, CardModel, FormModel, \
-    IconModel
+    IconModel, NewsModel
 
 
 def index(request):
     data = {}
+    news = NewsModel.objects.all()
+    data['news'] =  news
 
     # first display
     displays = DisplayModel.objects.all()
@@ -56,9 +58,29 @@ def form_view(request):
     if request.method == 'POST':
         byte_string = request.body
         json_string = byte_string.decode('utf-8')
+        print(json_string)
         parsed_dict = json.loads(json_string)
+        print(parsed_dict)
 
         mail_to_send = FormModel.objects.get(name='Форма заявки 1')
         print(send_mail(subject='Форма пользователя', message=f"{parsed_dict['name']} - {parsed_dict['email']}",
                         recipient_list=[mail_to_send.mail_to], from_email='userform1@yandex.ru'))
     return HttpResponse({'hello': 1})
+
+
+def second_form_view(request):
+    print(request.body.decode('utf-8'))
+    print('____________________________________________________________________________________________________')
+
+    if request.method == 'POST':
+        byte_string = request.body
+        json_string = byte_string.decode('utf-8')
+        parsed_dict = json.loads(json_string)
+
+        mail_to_send = FormModel.objects.get(name='Форма заявки 2')
+        mes = f"Country - {parsed_dict['country']} \n" \
+              f"City - {parsed_dict['city']} \n" \
+              f"Name - {parsed_dict['name']} \n" \
+              f"Email - {parsed_dict['email']} \n"
+        send_mail(subject='Форма пользователя', message=mes, recipient_list=[mail_to_send.mail_to], from_email='userform1@yandex.ru')
+    return HttpResponse({'hello': 2})

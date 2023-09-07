@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import DisplayModel, HeaderModel, TextModel, ImageModel, LinkModel, ButtonModel, CardModel, FormModel, \
-    IconModel
+    IconModel, NewsModel
 
 
 # Register your models here.
@@ -26,12 +26,16 @@ class LinkModelAdmin(admin.ModelAdmin):
 
 
 class ButtonModelAdmin(admin.ModelAdmin):
-    list_display = ('name', 'visible', 'text', 'href')  # Отображаемые поля в списке
+    list_display = ('name', 'visible', 'text', 'href', 'add_form')  # Отображаемые поля в списке
     list_filter = ('display',)  # Поле для фильтрации
     
 
 class FormModelAdmin(admin.ModelAdmin):
     list_display = ('name', 'mail_to')  # Отображаемые поля в списке
+
+
+class NewsModelAdmin(admin.ModelAdmin):
+    list_display = ('name', 'href', 'date')  # Отображаемые поля в списке
 
 
 # class CardModelAdmin(admin.ModelAdmin):
@@ -46,4 +50,5 @@ admin.site.register(LinkModel, LinkModelAdmin)
 admin.site.register(ButtonModel, ButtonModelAdmin)
 admin.site.register(CardModel)
 admin.site.register(FormModel, FormModelAdmin)
+admin.site.register(NewsModel, NewsModelAdmin)
 admin.site.register(IconModel)
