@@ -64,7 +64,7 @@ class LinkModel(models.Model):
     display = models.ForeignKey(DisplayModel, on_delete=models.CASCADE)
     name = models.CharField(verbose_name="Название", max_length=64)
     text = models.TextField(verbose_name="Текст")
-    href = models.TextField(verbose_name="Ссылка")
+    href = models.TextField(verbose_name="Ссылка", blank=True, null=True)
     title = models.TextField(verbose_name="title", blank=True, null=True)
 
     class Meta:
@@ -156,3 +156,27 @@ class NewsModel(models.Model):
 
     def __str__(self):
         return f"{self.name}"
+
+
+class PageModel(models.Model):
+    title = models.CharField(verbose_name='Title страницы', max_length=64)
+    description = models.CharField(verbose_name='Description страницы', max_length=256)
+    header = models.TextField(verbose_name='Заголовок страницы')
+    media_image = models.ImageField(upload_to='images/')
+    url = models.TextField(verbose_name='URL')
+    text = models.TextField(verbose_name='Текст страницы')
+    
+    class Meta:
+        verbose_name = 'Страница'
+        verbose_name_plural = 'Страницы'
+
+    def __str__(self):
+        return f"{self.title}"
+
+    # def to_dict(self):
+    #     return {
+    #         'title': self.title,
+    #         'description': self.description,
+    #         'header': self.header,
+    #         ''
+    #     }

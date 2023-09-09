@@ -3,10 +3,11 @@ from django.http import HttpResponse
 from django.core.mail import send_mail
 import json
 from .models import DisplayModel, HeaderModel, TextModel, ImageModel, LinkModel, ButtonModel, CardModel, FormModel, \
-    IconModel, NewsModel
+    IconModel, NewsModel, PageModel
 
 
 def index(request):
+    print(request.path)
     data = {}
     news = NewsModel.objects.all()
     data['news'] =  news
@@ -84,3 +85,47 @@ def second_form_view(request):
               f"Email - {parsed_dict['email']} \n"
         send_mail(subject='Форма пользователя', message=mes, recipient_list=[mail_to_send.mail_to], from_email='userform1@yandex.ru')
     return HttpResponse({'hello': 2})
+
+
+def page_view(request):
+    print(request.path)
+    data = {}
+    news = NewsModel.objects.all()
+    data['news'] =  news
+
+    # first display
+    displays = DisplayModel.objects.all()
+
+    for display in displays:
+
+        headers = HeaderModel.objects.filter(display=display)
+        images = ImageModel.objects.filter(display=display)
+        texts = TextModel.objects.filter(display=display)
+        links = LinkModel.objects.filter(display=display)
+        buttons = ButtonModel.objects.filter(display=display)
+        cards = CardModel.objects.all()
+        icons = IconModel.objects.all()
+        data[f'Display_{display.id}'] = {
+            'headers': {},
+            'texts': {},
+            'images': {},
+            'links': {},
+            'buttons': {},
+            'icons': []
+        }
+        data['icons'] = [icon for icon in icons]
+        data['cards'] = [card.to_dict() for card in cards]
+        for header in headers:
+            data[f'Display_{display.id}']['headers'][header.name.replace(' ', '_')] = header.text
+        for text in texts:
+            data[f'Display_{display.id}']['texts'][text.name.replace(' ', '_')] = text.text
+        for image in images:
+            data[f'Display_{display.id}']['images'][image.name.replace(' ', '_')] = image.to_dict()
+        for link in links:
+            data[f'Display_{display.id}']['links'][link.name.replace(' ', '_')] = link
+        for button in buttons:
+            data[f'Display_{display.id}']['buttons'][button.name.replace(' ', '_')] = button
+    data['page'] = PageModel.objects.get(url=request.path[1:])
+    print(data['page'])
+    
+    return render(request, 'page.html', context=data)

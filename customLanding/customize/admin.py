@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import DisplayModel, HeaderModel, TextModel, ImageModel, LinkModel, ButtonModel, CardModel, FormModel, \
-    IconModel, NewsModel
+    IconModel, NewsModel, PageModel
 
 
 # Register your models here.
@@ -38,6 +38,10 @@ class NewsModelAdmin(admin.ModelAdmin):
     list_display = ('name', 'href', 'date')  # Отображаемые поля в списке
 
 
+class PageModelAdmin(admin.ModelAdmin):
+    list_display = ('title', 'description', 'header', 'text')  # Отображаемые поля в списке
+
+
 # class CardModelAdmin(admin.ModelAdmin):
 #     list_display = ('title', 'visible', 'text', 'href')  # Отображаемые поля в списке
 
@@ -52,3 +56,4 @@ admin.site.register(CardModel)
 admin.site.register(FormModel, FormModelAdmin)
 admin.site.register(NewsModel, NewsModelAdmin)
 admin.site.register(IconModel)
+admin.site.register(PageModel, PageModelAdmin)

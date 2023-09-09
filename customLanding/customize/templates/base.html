@@ -6,13 +6,14 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>{{ Display_1.headers.Заголовок_страницы }}</title>
+      <meta name="description" content=">{{ Display_1.texts.Описание_страницы }}">
       <meta name="robots" content="noindex, nofollow">
       <link rel="dns-prefetch" href="//use.typekit.net">
       <link rel="dns-prefetch" href="//fonts.googleapis.com">
       <link rel="stylesheet" id="bootstrap-css" href="{% static 'css/bootstrap.min.css' %}" media="all">
       <link rel="stylesheet" id="parent-style-css" href="{% static 'css/parent-style.min.css' %}" media="all">
-      <link rel="stylesheet" id="child-style-css" href="https://www.keydesign-themes.com/intact/landing-page/wp-content/themes/intact-child/child-style.min.css" media="all">
-      <link rel="stylesheet" id="wp-block-library-css" href="{% static 'css/style.min.css' %}" media="all">
+      {% comment %} <link rel="stylesheet" id="child-style-css" href="https://www.keydesign-themes.com/intact/landing-page/wp-content/themes/intact-child/child-style.min.css" media="all"> {% endcomment %}
+      <link rel="stylesheet" href="{% static 'css/style.min.css' %}" media="all">
       <link rel="stylesheet" id="contact-form-7-css" href="{% static 'css/contact-form-7.min.css' %}" media="all">
       {% comment %} <link rel="stylesheet" id="keydesign-style-css" href="https://www.keydesign-themes.com/intact/landing-page/wp-content/themes/intact-child/keydesign-style.min.css" media="all"> {% endcomment %}
       <link rel="stylesheet" id="kd_addon_style-css" href="{% static 'css/kd_addon_style.min.css' %}" media="all">
@@ -78,7 +79,7 @@
       </nav>
       <div id="wrapper" class="">
          <header id="header"></header>
-         <section id="header-form" class="section parallax with-overlay" style="background-color:#1f1f1f;padding-top:250px;padding-bottom:220px;">
+         <section id="главная" class="section parallax with-overlay" style="background-color:#1f1f1f;padding-top:250px;padding-bottom:220px;">
             <div class="parallax-overlay" style="background-image: url(&quot;{{ Display_1.images.Фон.media_image.url }}&quot;); transform: translate3d(0px, -16.8519px, 0px);"></div>
             <div class="container ">
                <div class="row"></div>
@@ -135,7 +136,7 @@
                </div>
             </div>
          </section>
-         <section id="what-we-do" class="section" style="background-color:#f8f8f8;">
+         <section id="второй-экран" class="section" style="background-color:#f8f8f8;">
             <div class="container ">
                <div class="row">
                   <h2 class="section-heading">{{ Display_2.headers.Заголовок_второго_экрана }}</h2>
@@ -214,7 +215,7 @@
                </div>
             </div>
          </section>
-         <section id="our-story" class="section" style="padding-bottom:0px;">
+         <section id="третий-экран" class="section" style="padding-bottom:0px;">
             <div class="container fullwidth">
                <div class="row"></div>
                <div class="row">
@@ -289,7 +290,7 @@
                </div>
             </div>
          </section>
-         <section id="get-better-results" class="section" style="background-color:#f8f8f8;">
+         <section id="четвертый-экран" class="section" style="background-color:#f8f8f8;">
             <div class="container ">
                <div class="row"></div>
                <div class="row">
@@ -331,7 +332,7 @@
                </div>
             </div>
          </section>
-         <section id="1916" class="section">
+         <section id="пятый-экран" class="section">
             <div class="container ">
                <div class="row">
                   <h2 class="section-heading">{{ Display_5.headers.Заголовок }}</h2>
@@ -408,7 +409,7 @@
                </div>
             </div>
          </section>
-         <section id="pricing-options" class="section parallax with-overlay" style="background-color:#1f1f1f;padding-bottom:240px;">
+         <section id="шестой-экран" class="section parallax with-overlay" style="background-color:#1f1f1f;padding-bottom:240px;">
             <div class="parallax-overlay" style="background-image: url(&quot;https://www.keydesign-themes.com/intact/landing-page/wp-content/uploads/sites/7/2017/02/parallax-4.jpg&quot;); transform: translate3d(0px, -1781.13px, 0px);"></div>
             <div class="container ">
                <div class="row">
@@ -457,7 +458,7 @@
                </div>
             </div>
          </section>
-         <section id="pricing-plans" class="section" style="background-color:#f8f8f8;padding-top:0px;padding-bottom:75px;">
+         <section id="седьмой-экран" class="section" style="background-color:#f8f8f8;padding-top:0px;padding-bottom:75px;">
             <div class="container ">
                <div class="row"></div>
                <div class="row">
@@ -507,7 +508,7 @@
                </div>
             </div>
          </section>
-         <section id="need-more" class="section" style="background-color:#f8f8f8;padding-top:70px;padding-bottom:150px;">
+         <section id="восьмой-экран" class="section" style="background-color:#f8f8f8;padding-top:70px;padding-bottom:150px;">
             <div class="container ">
                <div class="row">
                   <h2 class="section-heading">{{ Display_8.headers.Заголовок_восьмого_экрана }}</h2>
