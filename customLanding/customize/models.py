@@ -1,4 +1,7 @@
 from django.db import models
+from django.dispatch import receiver
+from django.db.models.signals import post_save
+# from urls import urlpatterns
 
 
 class DisplayModel(models.Model):
@@ -172,11 +175,4 @@ class PageModel(models.Model):
 
     def __str__(self):
         return f"{self.title}"
-
-    # def to_dict(self):
-    #     return {
-    #         'title': self.title,
-    #         'description': self.description,
-    #         'header': self.header,
-    #         ''
-    #     }
+    

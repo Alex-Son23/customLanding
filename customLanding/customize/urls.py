@@ -7,16 +7,7 @@ app_name = 'main'
 urlpatterns = [
     path('', index, name='index'),
     path('form/', form_view, name='form'),
-    path('second_form/', second_form_view, name='second_form')
+    path('second_form/', second_form_view, name='second_form'),
+    path('<str:page>', page_view, name='page')
 ]
 
-
-pages = PageModel.objects.all()
-# print(pages[0].title)
-
-for page in pages:
-    print(page.title)
-    urlpatterns.append(
-        path(page.url, page_view, name=page.title),
-
-    )

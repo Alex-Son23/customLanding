@@ -87,8 +87,8 @@ def second_form_view(request):
     return HttpResponse({'hello': 2})
 
 
-def page_view(request):
-    print(request.path)
+def page_view(request, page):
+    print(request, page)
     data = {}
     news = NewsModel.objects.all()
     data['news'] =  news
@@ -125,7 +125,7 @@ def page_view(request):
             data[f'Display_{display.id}']['links'][link.name.replace(' ', '_')] = link
         for button in buttons:
             data[f'Display_{display.id}']['buttons'][button.name.replace(' ', '_')] = button
-    data['page'] = PageModel.objects.get(url=request.path[1:])
+    data['page'] = PageModel.objects.get(url=page)
     print(data['page'])
     
     return render(request, 'page.html', context=data)

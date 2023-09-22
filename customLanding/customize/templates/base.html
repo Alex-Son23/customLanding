@@ -51,11 +51,17 @@
                         {{ Display_1.links.Первая_кнопка_меню.text }}
                      </a>
                   </li>
-                  <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1997" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Вторая_кнопка_меню.title }}" href="{{ Display_1.links.Вторая_кнопка_меню.href }}">{{ Display_1.links.Вторая_кнопка_меню.text }}</a></li>
+                  {% comment %} <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1997" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Вторая_кнопка_меню.title }}" href="{{ Display_1.links.Вторая_кнопка_меню.href }}" onclick="scrollToElement('{{ Display_1.links.Вторая_кнопка_меню.href }}')">{{ Display_1.links.Вторая_кнопка_меню.text }}</a></li>
                   <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1998" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Вторая_кнопка_меню.title }}" href="{{ Display_1.links.Третья_кнопка_меню.href }}">{{ Display_1.links.Третья_кнопка_меню.text }}</a></li>
                   <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1999" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Вторая_кнопка_меню.title }}" href="{{ Display_1.links.Четвертая_кнопка_меню.href }}">{{ Display_1.links.Четвертая_кнопка_меню.text }}</a></li>
                   <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2000" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Вторая_кнопка_меню.title }}" href="{{ Display_1.links.Пятая_кнопка_меню.href }}">{{ Display_1.links.Пятая_кнопка_меню.text }}</a></li>
-                  <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2001" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Вторая_кнопка_меню.title }}" href="{{ Display_1.links.Шестая_кнопка_меню.href }}">{{ Display_1.links.Шестая_кнопка_меню.text }}</a></li>
+                  <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2001" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Вторая_кнопка_меню.title }}" href="{{ Display_1.links.Шестая_кнопка_меню.href }}">{{ Display_1.links.Шестая_кнопка_меню.text }}</a></li> {% endcomment %}
+
+                  <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1997" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Вторая_кнопка_меню.title }}" onclick="scrollToElement('{{ Display_1.links.Вторая_кнопка_меню.href }}')">{{ Display_1.links.Вторая_кнопка_меню.text }}</a></li>
+                  <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1998" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Третья_кнопка_меню.title }}" onclick="scrollToElement('{{ Display_1.links.Третья_кнопка_меню.href }}')">{{ Display_1.links.Третья_кнопка_меню.text }}</a></li>
+                  <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1999" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Четвертая_кнопка_меню.title }}" onclick="scrollToElement('{{ Display_1.links.Четвертая_кнопка_меню.href }}')">{{ Display_1.links.Четвертая_кнопка_меню.text }}</a></li>
+                  <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2000" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Пятая_кнопка_меню.title }}" onclick="scrollToElement('{{ Display_1.links.Пятая_кнопка_меню.href }}')">{{ Display_1.links.Пятая_кнопка_меню.text }}</a></li>
+                  <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2001" class="menu-item menu-item-type-post_type menu-item-object-page one-page-link"><a title="{{ Display_1.links.Шестая_кнопка_меню.title }}" onclick="scrollToElement('{{ Display_1.links.Шестая_кнопка_меню.href }}')">{{ Display_1.links.Шестая_кнопка_меню.text }}</a></li>
                </ul>
                <div class="header-search-bar">
                   <span class="toggle-search fa-search fa"></span>
@@ -65,7 +71,7 @@
                      </form>
                   </div>
                </div>
-               <a class="modal-menu-item menu-item scroll-section" href="{{ Display_1.buttons.Кнопка_в_меню.href }}" title="{{ Display_1.buttons.Кнопка_в_меню.title }}">{{ Display_1.buttons.Кнопка_в_меню.text }}</a>
+               <a class="modal-menu-item menu-item scroll-section" onclick="scrollToElement('{{ Display_1.buttons.Кнопка_в_меню.href }}')" title="{{ Display_1.buttons.Кнопка_в_меню.title }}">{{ Display_1.buttons.Кнопка_в_меню.text }}</a>
             </div>
          </div>
       </nav>
@@ -194,9 +200,9 @@
                            <div class="vc_column-inner">
                               <div class="wpb_wrapper">
                                  {% if not Display_2.buttons.Кнопка.add_form %}
-                                 <a style="width:px" href="{{ Display_2.buttons.Кнопка.href }}" target="_self" title="{{ Display_2.buttons.Кнопка.title }}" class="tt_button button-center kd-animated zoomIn kd-animate" data-animation-delay="200"><span class="prim_text">{{ Display_2.buttons.Кнопка.text }}</span></a>
+                                 <a style="width:px" onclick="scrollToElement('{{ Display_2.buttons.Кнопка.href }}')" target="_self" title="{{ Display_2.buttons.Кнопка.title }}" class="tt_button button-center kd-animated zoomIn kd-animate" data-animation-delay="200"><span class="prim_text">{{ Display_2.buttons.Кнопка.text }}</span></a>
                                  {% else %}
-                                 <button style="width:px" href="{{ Display_2.buttons.Кнопка.href }}" data-toggle="modal" target="_self" title="{{ Display_2.buttons.Кнопка.title }}" class="tt_button button-center kd-animated zoomIn kd-animate" data-animation-delay="200" {% if Display_2.buttons.Кнопка.add_form %}data-target="#exampleModal" {% endif %}data-whatever="@getbootstrap"><span class="prim_text">{{ Display_2.buttons.Кнопка.text }}</span></button>
+                                 <button style="width:px" data-toggle="modal" target="_self" title="{{ Display_2.buttons.Кнопка.title }}" class="tt_button button-center kd-animated zoomIn kd-animate" data-animation-delay="200" {% if Display_2.buttons.Кнопка.add_form %}data-target="#exampleModal" {% endif %}data-whatever="@getbootstrap"><span class="prim_text">{{ Display_2.buttons.Кнопка.text }}</span></button>
                                  {% endif %}
                               </div>
                            </div>
@@ -260,7 +266,7 @@
                                           <div class="wpb_wrapper">
                                              <div class="vc_empty_space" style="height: 55px"><span class="vc_empty_space_inner"></span></div>
                                              {% if not Display_3.buttons.Кнопка.add_form %}
-                                             <a style="width:px" href="{{ Display_3.buttons.Кнопка.href }}" target="_self" title="{{ Display_3.buttons.Кнопка.title }}" class="tt_button tt_secondary_button pull-left kd-animated zoomIn kd-animate" data-animation-delay="200"><span class="prim_text">{{ Display_3.buttons.Кнопка.text }}</span></a>
+                                             <a style="width:px" onclick="scrollToElement('{{ Display_3.buttons.Кнопка.href }}')"target="_self" title="{{ Display_3.buttons.Кнопка.title }}" class="tt_button tt_secondary_button pull-left kd-animated zoomIn kd-animate" data-animation-delay="200"><span class="prim_text">{{ Display_3.buttons.Кнопка.text }}</span></a>
                                              {% else %}
                                              <button style="width:px" href="{{ Display_3.buttons.Кнопка.href }}" data-toggle="modal" target="_self" title="{{ Display_3.buttons.Кнопка.title }}" class="tt_button tt_secondary_button pull-left kd-animated zoomIn kd-animate" data-animation-delay="200" {% if Display_8.buttons.Кнопка.add_form %}data-target="#exampleModal" {% endif %}data-whatever="@getbootstrap"><span class="prim_text">{{ Display_3.buttons.Кнопка.text }}</span></button>
                                              {% endif %}
@@ -514,7 +520,12 @@
                         <div class="wpb_column vc_column_container vc_col-sm-12">
                            <div class="vc_column-inner">
                               <div class="wpb_wrapper">
+                                 {% if not Display_8.buttons.Кнопка.add_form %}
+                                 <a style="width:px" onclick="scrollToElement('{{ Display_8.buttons.Кнопка.href }}')"target="_self" title="{{ Display_3.buttons.Кнопка.title }}" class="tt_button   button-center kd-animated zoomIn" data-animation-delay="200"><span class="prim_text">{{ Display_8.buttons.Кнопка.text }}</span></a>
+                                 {% else %}
                                  <button style="width:px" href="{{ Display_8.buttons.Кнопка.href }}" data-toggle="modal" target="_self" title="{{ Display_8.buttons.Кнопка.title }}" class="tt_button   button-center kd-animated zoomIn " data-animation-delay="200" {% if Display_8.buttons.Кнопка.add_form %}data-target="#exampleModal" {% endif %}data-whatever="@getbootstrap"><span class="prim_text">{{ Display_8.buttons.Кнопка.text }}</span></button>
+                                 {% endif %}
+                                 
                               </div>
 
                            </div>
@@ -748,13 +759,16 @@
       <script id="intact-typekit-js-after"> try{Typekit.load({ async: true });}catch(e){} </script> 
       
       <script>
-         {% comment %} $('#form_2').submit(function() {
-
-            // submission stuff
-            console.log('-____________________________________')
+         let scrollList = ['второй-экран', 'третий-экран', 'четвертый-экран', 'пятый-экран', 'шестой-экран', 'восьмой-экран'];
+         function scrollToElement(elem) {
             
-            return false;
-         }); {% endcomment %}
+            if (!(scrollList.includes(elem))){
+               window.location.href = elem;
+               return;
+            }
+            var targetElement = document.getElementById(elem);
+            targetElement.scrollIntoView({ behavior: "smooth" }); // Для плавного скролла
+         }
          function handleSubmit(event) {
             event.preventDefault();
             const form = event.target;
