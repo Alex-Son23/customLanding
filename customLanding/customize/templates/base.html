@@ -47,7 +47,7 @@
                               display: none !important;
                            }
                         </style>
-                     <a title="{{ Display_1.links.Первая_кнопка_меню.title }}" href="{{ Display_1.links.Первая_кнопка_меню.href }}" >
+                     <a title="{{ Display_1.links.Первая_кнопка_меню.title }}" onclick="scrollToElement('{{ Display_1.links.Первая_кнопка_меню.href }}')">
                         {{ Display_1.links.Первая_кнопка_меню.text }}
                      </a>
                   </li>
@@ -762,6 +762,9 @@
          let scrollList = ['второй-экран', 'третий-экран', 'четвертый-экран', 'пятый-экран', 'шестой-экран', 'восьмой-экран'];
          function scrollToElement(elem) {
             
+            {% comment %} jQuery('.dropdown-toggle').collapse('toggle'); {% endcomment %}
+            jQuery('.navbar-toggle').click();
+            {% comment %} console.log(jQuery('.navbar-toggle').dropdown()) {% endcomment %}
             if (!(scrollList.includes(elem))){
                window.location.href = elem;
                return;
@@ -884,7 +887,6 @@
          form_1.addEventListener('submit', handleSubmit);
          let form_2 = document.getElementById("form_2");
          form_2.addEventListener('submit', handleSubmit2);
-
       </script>
       <script src="https://kit.fontawesome.com/408dc19238.js" crossorigin="anonymous"></script>
       
