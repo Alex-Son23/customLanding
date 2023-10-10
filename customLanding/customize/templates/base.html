@@ -8,6 +8,7 @@
       <title>{{ Display_1.headers.Заголовок_страницы }}</title>
       <meta name="description" content=">{{ Display_1.texts.Описание_страницы }}">
       <meta name="robots" content="noindex, nofollow">
+      <link rel="icon" type="image/png" href="{{ Display_1.images.Иконка_страницы.media_image.url }}" sizes="96x96" />
       <link rel="dns-prefetch" href="//use.typekit.net">
       <link rel="dns-prefetch" href="//fonts.googleapis.com">
       <link rel="stylesheet" id="bootstrap-css" href="{% static 'css/bootstrap.min.css' %}" media="all">
@@ -759,7 +760,7 @@
       <script id="intact-typekit-js-after"> try{Typekit.load({ async: true });}catch(e){} </script> 
       
       <script>
-         let scrollList = ['второй-экран', 'третий-экран', 'четвертый-экран', 'пятый-экран', 'шестой-экран', 'восьмой-экран'];
+         let scrollList = ['второй-экран', 'третий-экран', 'четвертый-экран', 'пятый-экран', 'шестой-экран', 'восьмой-экран', 'footer'];
          function scrollToElement(elem) {
             
             {% comment %} jQuery('.dropdown-toggle').collapse('toggle'); {% endcomment %}
