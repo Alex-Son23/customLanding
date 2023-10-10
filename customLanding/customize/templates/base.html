@@ -764,7 +764,11 @@
          function scrollToElement(elem) {
             
             {% comment %} jQuery('.dropdown-toggle').collapse('toggle'); {% endcomment %}
-            jQuery('.navbar-toggle').click();
+            var w = window.innerWidth;
+            if (w < 1000) {
+               jQuery('.navbar-toggle').click();
+            }
+            
             {% comment %} console.log(jQuery('.navbar-toggle').dropdown()) {% endcomment %}
             if (!(scrollList.includes(elem))){
                window.location.href = elem;
